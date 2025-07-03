@@ -7,14 +7,23 @@ import seaborn as sns
 
 st.set_page_config(
     page_title='Kenya's Debt Analysis',
-    page_icon='💰','<img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg" width="60">',
-    layout='wide',
+    page_icon='💰',
     initial_sidebar_state='expanded')
 
 alt.themes.enable('dark')
 
-#df1 = pd.read_csv('kenya_debt_analysis.csv')
+df1 = pd.read_csv('kenya_debt_analysis.csv')
 
-#with st.sidebar:
+with st.sidebar:
+    st.title('💰 Kenya's Debt Analysis')
+
+    year_list = list(df1['Year'].unique())[::-1] #newest year appears first
+    df1['Year'] = df1['Year'].astype(int)
+    selected_year = st.selectbox('Select year here', year_list, index=(len(year_list)-1))
+    df1_selected_year = df1[df1['Year'] == selected_year]
+    df1_selected_year_sorted = df1_selected_year.sort_values(by='Total', ascending=False)
+
+    color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
+    selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
 
 
