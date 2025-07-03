@@ -17,7 +17,7 @@ with st.sidebar:
     st.title('💰 Kenyas Debt Analysis')
 
     year_list = list(df1['Year'].unique())[::-1] #newest year appears first
-    df1['Year'] = df1['Year'].astype(int)
+    #df1['Year'] = df1['Year'].astype(int)
     selected_year = st.selectbox('Select year here', year_list, index=(len(year_list)-1))
     df1_selected_year = df1[df1['Year'] == selected_year]
     df1_selected_year_sorted = df1_selected_year.sort_values(by='Total', ascending=False)
