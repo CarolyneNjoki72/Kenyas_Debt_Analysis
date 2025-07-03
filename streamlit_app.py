@@ -15,7 +15,7 @@ alt.themes.enable('dark')
 df1 = pd.read_csv('kenya_debt_analysis.csv')
 
 with st.sidebar:
-    st.title('💰 Kenya's Debt Analysis')
+    st.title('💰 Kenyas Debt Analysis')
 
     year_list = list(df1['Year'].unique())[::-1] #newest year appears first
     df1['Year'] = df1['Year'].astype(int)
