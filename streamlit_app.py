@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(
-    page_title='Kenya's Debt Analysis',
+    page_title='Kenya Debt Analysis',
     page_icon='💰',
     initial_sidebar_state='expanded')
 
