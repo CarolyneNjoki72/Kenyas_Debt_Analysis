@@ -25,10 +25,10 @@ with st.sidebar:
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
 
-'Total','YoY Growth Rate', 'Debt_to_GDP_Ratio' = st.columns(3)
-col1.metric('Total Debt')
-col1.metric('Yearly Debt Growth Rate')
-col2.metric('Debt to GDP Ratio')
+st.metrics(label='Total')
+#col1.metric('Total Debt')
+#col1.metric('Yearly Debt Growth Rate')
+#col2.metric('Debt to GDP Ratio')
 
 st.line_chart(
     data=df1,
