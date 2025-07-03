@@ -26,8 +26,8 @@ with st.sidebar:
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
 
 st.line_chart(
-    df1,
-    x='Year'
+    data=df1,
+    x='Year',
     y=['External Debt', 'Domestic Debt', 'Total'],
     x_label='Year',
     y_label='Amount in million shillings' )
