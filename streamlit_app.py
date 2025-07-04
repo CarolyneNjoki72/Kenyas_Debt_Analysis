@@ -15,6 +15,7 @@ selected_year = st.sidebar.selectbox("Select Year", years)
 summary_filtered = df_summary[df_summary['Year'] == selected_year]
 breakdown_filtered = df_breakdown[df_breakdown['Year'] == selected_year]
 
+
 # Header
 st.title("📊 Kenya Public Debt Dashboard")
 st.markdown(f"**Selected Year:** {selected_year}")
