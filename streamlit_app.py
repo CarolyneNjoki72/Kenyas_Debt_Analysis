@@ -37,5 +37,5 @@ st.line_chart(
     x_label='Year',
     y_label='Amount in million shillings' )
 
-fig = px.pie(df1, values=['External Debt','Domestic Debt'], title="The Distribution of Public Debt")
-st.plotly_chart(fig, theme=None)
+fig_pie = px.pie(df1, values=['External Debt','Domestic Debt'], names='Debt' title='The Distribution of Public Debt')
+st.plotly_chart(fig_pie, theme=None)
