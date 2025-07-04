@@ -25,7 +25,7 @@ with st.sidebar:
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
 
-st.metric(label='Total', value= '11.1 Trillion Shillings', delta='21%')
+#st.metric(label='Total', value= '11.1 Trillion Shillings', delta='21%')
 #col1.metric('Total Debt')
 #col1.metric('Yearly Debt Growth Rate')
 #col2.metric('Debt to GDP Ratio')
@@ -37,5 +37,5 @@ st.line_chart(
     x_label='Year',
     y_label='Amount in million shillings' )
 
-
-
+fig = px.pie(df1, values=['External Debt','Domestic Debt', title="The Distribution of Public Debt")
+st.plotly_chart(fig, theme=None)
