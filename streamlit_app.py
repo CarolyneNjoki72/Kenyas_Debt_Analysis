@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import altair as alt
 
 # Load your datasets
 df_summary = pd.read_csv("kenya_debt_analysis.csv")  # Dataset 1
